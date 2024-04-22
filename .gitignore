@@ -9,3 +9,4 @@ ClassVTTFiles/*
 ClassTranscriptions/
 ClassTranscriptions/*
 models/*.gguf
+.venv/
