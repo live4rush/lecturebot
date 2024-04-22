@@ -1,4 +1,5 @@
 langchain
+langchain_community
 llama-cpp-python
 qdrant-client
 InstructorEmbedding
@@ -7,3 +8,4 @@ tiktoken
 lark
 requests
 openai-whisper
+webvtt-py
