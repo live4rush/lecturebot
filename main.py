@@ -64,10 +64,10 @@ def pkl_to_document(pkl_file_path):
 
 # Define constants
 TOKEN_LIMIT = 4096 - 512
-n_gpu_layers = 1
+n_gpu_layers = 20
 n_batch = 256
 n_ctx = 4096
-n_threads = 12
+n_threads = 36
 max_tokens = 4096
 MODEL_PATH = "models/llama-2-13b-chat.Q4_K_M.gguf"
 LLM_PATH = "models/"
