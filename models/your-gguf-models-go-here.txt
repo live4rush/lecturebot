@@ -1,0 +1,2 @@
+Place your GGUF models from hugging face inside this directory.
+Update the MODEL_PATH variable in main.py.

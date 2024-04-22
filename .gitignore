@@ -1,0 +1,11 @@
+.DS_Store
+.vscode/*
+.vscode/
+__pycache__/*
+__pycache__/
+qdrant/*
+ClassVTTFiles/
+ClassVTTFiles/*
+ClassTranscriptions/
+ClassTranscriptions/*
+models/*.gguf
