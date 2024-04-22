@@ -13,7 +13,7 @@ def generate_summary(llm, input_text):
     map_template = """[INST] <<SYS>>
         You are a helpful assistant. Complete the task below. Output the answer only. Do not include any greetings or instructions.
         <</SYS>>
-        Summarize the below text from a podcast episode:
+        Summarize the below text from a class trascript:
         {docs}[/INST]
         """
     map_prompt = PromptTemplate.from_template(map_template)
@@ -30,8 +30,8 @@ def generate_summary(llm, input_text):
     # Concatenate summaries into one string
     concatenated_summaries = ' '.join(summaries)
     output = concatenated_summaries.replace(
-        "Sure! Here is the summary of the podcast episode:\n\n", "")
+        "Sure! Here is the summary of the class trascript:\n\n", "")
     output = concatenated_summaries.replace(
-        "Sure! Here is a summary of the podcast episode:\n\n", "")
+        "Sure! Here is a summary of the class trascript:\n\n", "")
 
     return output
