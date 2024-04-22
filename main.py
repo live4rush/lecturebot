@@ -111,7 +111,7 @@ print("Number of documents:", len(pickle_documents))
 print("Loading Embeddings model")
 # Embeddings model
 model_name = "sentence-transformers/all-mpnet-base-v2"
-model_kwargs = {'device': 'mps'}
+#model_kwargs = {'device': 'mps'}
 embeddings = HuggingFaceEmbeddings(
     model_name=model_name,
     model_kwargs=model_kwargs,
