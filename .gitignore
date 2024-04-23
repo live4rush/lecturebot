@@ -6,7 +6,7 @@ __pycache__/
 qdrant/*
 ClassVTTFiles/
 ClassVTTFiles/*
-ClassTranscriptions/
-ClassTranscriptions/*
+#ClassTranscriptions/
+#ClassTranscriptions/*
 models/*.gguf
 .venv/
