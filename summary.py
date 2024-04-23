@@ -8,6 +8,7 @@ def generate_summary(llm, input_text):
     text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
         chunk_size=500, chunk_overlap=50)
     chunks = text_splitter.split_text(input_text.replace('\n', ''))
+    print("Number of chunks:",len(chunks))
 
     # Map
     map_template = """[INST] <<SYS>>
@@ -21,7 +22,8 @@ def generate_summary(llm, input_text):
 
     # Process each chunk through the map_chain
     summaries = []
-    for chunk in chunks:
+    for i,chunk in enumerate(chunks):
+        print("this is chunk:",i)
         summary = map_chain.run(chunk)
         cleaned_summary = summary.replace(
             "Sure! Here is a summary of the text:\n\n", "")
