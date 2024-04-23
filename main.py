@@ -14,6 +14,7 @@ import langchain
 from langchain.prompts import PromptTemplate
 import time
 import argparse
+import langchain.schema
 
 
 # Create argument parser
@@ -49,8 +50,9 @@ def load_pkl_files_from_directory(directory_path):
 def pkl_to_document(pkl_file_path):
     with open(pkl_file_path, 'rb') as file:
         pkl_data = pickle.load(file)
-
-        if isinstance(pkl_data, Document) or isinstance(pkl_data, langchain.schema.document.Document):
+        print("printing langchain schema")
+        print(dir(langchain.schema.Document))
+        if isinstance(pkl_data, Document) or isinstance(pkl_data, langchain.schema.Document):
             return pkl_data
 
         elif isinstance(pkl_data, dict):
