@@ -15,6 +15,7 @@ from langchain.prompts import PromptTemplate
 import time
 import argparse
 
+
 # Create argument parser
 parser = argparse.ArgumentParser(
     description="Run a query on the document set.")
