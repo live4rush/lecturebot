@@ -50,8 +50,8 @@ def load_pkl_files_from_directory(directory_path):
 def pkl_to_document(pkl_file_path):
     with open(pkl_file_path, 'rb') as file:
         pkl_data = pickle.load(file)
-        print("printing langchain schema")
-        print(dir(langchain.schema.Document))
+        #print("printing langchain schema")
+        #print(dir(langchain.schema.Document))
         if isinstance(pkl_data, Document) or isinstance(pkl_data, langchain.schema.Document):
             return pkl_data
 
