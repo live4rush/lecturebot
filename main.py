@@ -104,9 +104,9 @@ if len(pickle_documents) < len(documents):
                   (index+1), "out of ", len(documents))
             doc.page_content = doc.page_content.replace('\n', '')
             doc.metadata["summary"] = generate_summary(llm, doc.page_content)
-            doc.metadata["topics"] = generate_topics(
-                llm, doc.metadata["summary"])
-
+            print(doc.metadata["summary"])
+            doc.metadata["topics"] = generate_topics(llm, doc.metadata["summary"])
+            print(doc.metadata["topics"])
             with open(doc.metadata["source"].replace(".txt", ".pkl"), 'wb') as file:
                 pickle.dump(doc, file)
 

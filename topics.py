@@ -35,7 +35,7 @@ def generate_topics(llm, summary):
     map_template = """[INST] <<SYS>>
         You are a helpful assistant. Complete the task below. Output the result in a numbered list. Eaxmple: 1. Topic 1 2. Topic 2
         <</SYS>>
-        Make a list three topics the podcast episode covers based on the summary below.
+        Make a list three topics the class transcript covers based on the summary below.
         {summary}[/INST]
         """
     map_prompt = PromptTemplate.from_template(template=map_template)
