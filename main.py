@@ -91,14 +91,15 @@ llm = LlamaCpp(
 documents = load_docs()
 # We want to turn pkl docs to List<Document>
 pickle_documents = load_pkl_files_from_directory('./ClassTranscriptions')
-# pickle_documents = load_docs(True)
 
 if len(pickle_documents) < len(documents):
     # Loop over documents and add metadata so we can search it later
     for index, doc in enumerate(documents):
+        print(index, doc.metadata["source"])
         if os.path.exists(doc.metadata["source"].replace(".txt", ".pkl")):
-            break
+            print("file exists, no need to create pkl file:",doc.metadata["source"].replace(".txt", ".pkl"))
         else:
+            print("file doesnt exists, creating pkl file:", doc.metadata["source"].replace(".txt", ".pkl"))
             print("Generating summaries and topics for document #",
                   (index+1), "out of ", len(documents))
             doc.page_content = doc.page_content.replace('\n', '')
